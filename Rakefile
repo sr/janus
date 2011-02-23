@@ -201,6 +201,12 @@ vim_plugin_task "mustache" do
     file << "au BufNewFile,BufRead *.mustache        setf mustache"
   end
 end
+
+vim_plugin_task "puppet" do
+  sh "curl https://github.com/puppetlabs/puppet/raw/master/ext/vim/syntax/puppet.vim > syntax/puppet.vim"
+  sh "curl https://github.com/puppetlabs/puppet/blob/master/ext/vim/ftdetect/puppet.vim > ftdetect/puppet.vim"
+end
+
 vim_plugin_task "vwilight" do
   sh "curl https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim > colors/vwilight.vim"
 end
